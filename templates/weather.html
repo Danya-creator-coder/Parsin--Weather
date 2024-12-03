@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода в {{ weather.city }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Погода в {{ weather.city }}, {{ weather.country }}</h1>
+        <div class="card mx-auto shadow-sm" style="max-width: 500px;">
+            <div class="card-body text-center">
+                <h2>{{ weather.temperature }}°C</h2>
+                <p><em>Ощущается как {{ weather.feels_like }}C</em></p>
+                <p><strong>Описание:</strong> {{ weather.description }}</p>
+                <p><strong>Влажность:</strong> {{ weather.humidity }}%</p>
+                <p><strong>Давление:</strong> {{ weather.pressure }} гПа</p>
+                <p><strong>Скорость ветра:</strong> {{ weather.wind_speed }} м/с</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

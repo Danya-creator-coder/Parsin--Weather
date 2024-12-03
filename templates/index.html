@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container text-center py-5">
+        <h1>Добро пожаловати в нашу піццерію!</h1>
+        <p>Узнайте погоду и получить рекомендацію по піцці.</p>
+        <a href="/weather" class="btn btn-primary btn-lg mb-4">Дивитись погоду</a>
+
+        {% if is_hot %}
+        <div>
+            <h2>На вулиці жарко? Попробуйте "Маргариту"!</h2>
+            <img src="https://lh3.googleusercontent.com/-F7-f2RyixFJ_0-MIGehlz7lp08CkWuy7Y64qDx8zcSrAyHA_uWVnJx1XOVAHg_qoFD7fW34aWScKlOz7tlHx8LeBxDoB64vaZ6LCKKMAPPnr8-QTpPpQVVK-xGPWFZomSVkVZXW" alt="Маргарита" class="img-fluid rounded" style="max-width: 300px;">
+        </div>
+        {% elif is_rainy_or_snowy %}
+        <div>
+            <h2>Дождливо або снежно? "Пепперони" идеальний вибор!</h2>
+            <img src="https://ecopizza.com.ua/555-large_default/picca-pepperoni.webp" alt="Пепперони" class="img-fluid rounded" style="max-width: 300px;">
+        </div>
+        {% elif is_cold %}
+        <div>
+            <h2>Холодно? Зі грійтесь "Чотири сири"!</h2>
+            <img src="https://foodfestival.com.ua/image/catalog/articles/a4aICAacch2xy0v-ESxUBeQTN6YxrUdQ.jpg" alt="Чотири сири" class="img-fluid rounded" style="max-width: 300px;">
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
